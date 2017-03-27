@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webMethodsTestSuite description="" name="DHLSetUp.xml">
+    <webMethodsTestCase name="Test1">
+        <service folder="services" name="echoDHL">
+            <input>
+                <file filename="resources\data\in.xml"/>
+            </input>
+            <expected>
+                <file filename="resources\data\out.xml"/>
+            </expected>
+        </service>
+    </webMethodsTestCase>
+</webMethodsTestSuite>
