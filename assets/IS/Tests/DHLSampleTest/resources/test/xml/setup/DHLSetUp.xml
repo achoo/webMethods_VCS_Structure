@@ -3,10 +3,10 @@
     <webMethodsTestCase name="Test1">
         <service folder="services" name="echoDHL">
             <input>
-                <file filename="resources\data\in.xml"/>
+                <file filename="resources\test\xml\data\in.xml"/>
             </input>
             <expected>
-                <file filename="resources\data\out.xml"/>
+                <file filename="resources\test\xml\data\out.xml"/>
             </expected>
         </service>
     </webMethodsTestCase>
