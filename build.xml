@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<project name="testBuild" default="test" basedir="." >
+	<property file="project.properties"/>
+
+ 
+	
+	<target name="test" depends="initProject,startTest">
+		<echo>Test Call</echo>
+	</target>
+	
+</project>
+
