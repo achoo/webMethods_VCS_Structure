@@ -2,7 +2,7 @@
 <project name="testBuild" default="test" basedir="." >
 	<property file="project.properties"/>
 
-        <property name="workspace.dir" location="${relative.path}"/>
+        <property name="workspace.dir" location="."/>
 
 	
 	<target name="test" depends="">
