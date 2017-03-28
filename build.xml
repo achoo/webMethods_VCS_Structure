@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <project name="testBuild" default="test" basedir="." >
-	<property file="project.properties"/>
-
         <property name="workspace.dir" location="."/>
+        
+        <!-- project.properties -->
+	<property file="project.properties"/>
 
 	
 	<target name="test" depends="">
