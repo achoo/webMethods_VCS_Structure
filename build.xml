@@ -2,10 +2,11 @@
 <project name="testBuild" default="test" basedir="." >
 	<property file="project.properties"/>
 
- 
 	
 	<target name="test" depends="">
 		<echo>Test Call</echo>
+
+                <ant antfile="$CI_BUILD"/>
 	</target>
 	
 </project>
