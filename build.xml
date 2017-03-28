@@ -6,11 +6,11 @@
 
 	
 	<target name="test" depends="">
-		<echo>Test Call: {$CI_BUILD}</echo>
+		<echo>Test Call: ${CI_BUILD}</echo>
 
  
 
-                <ant antfile="{$CI_BUILD}"/>
+                <ant antfile="${CI_BUILD}"/>
 	</target>
 	
 </project>
