@@ -2,6 +2,8 @@
 <project name="testBuild" default="test" basedir="." >
 	<property file="project.properties"/>
 
+        <property name="workspace.dir" location="${relative.path}"/>
+
 	
 	<target name="test" depends="">
 		<echo>Test Call</echo>
