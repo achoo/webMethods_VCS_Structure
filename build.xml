@@ -8,9 +8,7 @@
 	<target name="test" depends="">
 		<echo>Test Call: ${SAG_CI_HOME}</echo>
 
- 
-
-                <ant dir="${SAG_CI_HOME}" antfile="${SAG_CI_HOME}/build.xml"/>
+                <ant dir="${SAG_CI_HOME}" antfile="${SAG_CI_HOME}/build.xml" inheritAll="true"/>
 	</target>
 	
 </project>
