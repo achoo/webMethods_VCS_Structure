@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Build'){
             steps {
+                sh 'env'
                 echo "${env.PATH}" 
                 echo "${PATH}"
                 echo "${env.SAG_HOME}"
