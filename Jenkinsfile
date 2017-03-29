@@ -1,4 +1,4 @@
-startTespeline {
+pipeline {
     agent any 
 
     stages {
@@ -18,4 +18,4 @@ startTespeline {
             }
         }
     }
-}t
+}
