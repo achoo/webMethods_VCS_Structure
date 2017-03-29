@@ -1,0 +1,27 @@
+pipeline {
+    agent any 
+
+    stages {
+        stage('Checkout') { 
+            steps { 
+		git 'https://github.com/achoo/webMethods_VCS_Structure'
+            }
+        }
+        stage('Build'){
+            steps {
+                sh '/home/angel/softwareag912_CI/common/AssetBuildEnvironment/ant/bin/ant build -DSAG_CI_HOME=/home/angel/SAG_CI'
+            }
+        }
+        stage('Deploy') {
+            steps {
+		sh '/home/angel/softwareag912_CI/common/AssetBuildEnvironment/ant/bin/ant deploy -DSAG_CI_HOME=/home/angel/SAG_CI'
+            }
+        }
+ 	stage('Test') {
+            steps {
+		sh '/home/angel/softwareag912_CI/common/AssetBuildEnvironment/ant/bin/ant test -DSAG_CI_HOME=/home/angel/SAG_CI'
+		junit 'report/'
+            }
+        }
+    }
+}
