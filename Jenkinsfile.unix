@@ -9,17 +9,17 @@ pipeline {
         }
         stage('Build'){
             steps {
-                sh '/home/angel/softwareag912_CI/common/AssetBuildEnvironment/ant/bin/ant -DSAG_CI_HOME=/home/angel/SAG_CI build'
+                sh 'env.SAG_HOME/common/AssetBuildEnvironment/ant/bin/ant -DSAG_CI_HOME=env.SAG_CI_HOME build'
             }
         }
         stage('Deploy') {
             steps {
-		sh '/home/angel/softwareag912_CI/common/AssetBuildEnvironment/ant/bin/ant -DSAG_CI_HOME=/home/angel/SAG_CI deploy'
+		sh 'env.SAG_HOME/common/AssetBuildEnvironment/ant/bin/ant -DSAG_CI_HOME=env.SAG_CI_HOME deploy'
             }
         }
  	stage('Test') {
             steps {
-		sh '/home/angel/softwareag912_CI/common/AssetBuildEnvironment/ant/bin/ant -DSAG_CI_HOME=/home/angel/SAG_CI test'
+		sh 'env.SAG_HOME/common/AssetBuildEnvironment/ant/bin/ant -DSAG_CI_HOME=env.SAG_CI_HOME test'
 		junit 'report/'
             }
         }
