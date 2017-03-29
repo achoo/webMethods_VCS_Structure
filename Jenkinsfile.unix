@@ -12,7 +12,7 @@ pipeline {
                 echo "${env.PATH}" 
                 echo "${PATH}"
                 echo "${env.SAG_HOME}"
-                echo "${SAG_HOME}"
+		echo "${env.SAG_CI_HOME}"
                 sh '${env.SAG_HOME}/common/AssetBuildEnvironment/ant/bin/ant -DSAG_CI_HOME=${env.SAG_CI_HOME} build'
             }
         }
